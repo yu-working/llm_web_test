@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>英格蘭足球超級聯賽-大型語言模型【google/flan-t5-xxl】</title>
+    <link rel="stylesheet" href="assets/css/test.css"/>
+</head>
+<div id="im">
+  
+    <div id="input">
+      <div>
+
+        <span>姓名：</span><input id="name"><br/>
+        <span>內容：</span><input id="content">
+      </div>
+      <button id="btn" onClick="showButtonEvent();setTimeout(Ans, 1500)">送出訊息</button>
+    </div>
+    <script>
+      function showButtonEvent()
+      {
+          var content = document.getElementById("content");
+          var name = document.getElementById("name");
+          document.getElementById("ucontent").textContent=content.value;
+          document.getElementById("uname").textContent=name.value;
+          document.getElementById("content").value="";
+          {document.getElementById('ucontent') .style.display='inline-block'}
+          {document.getElementById('uname') .style.display='inline-block'}
+          {document.getElementById('NM') .style.display='inline-block'}
+          {document.getElementById('CT') .style.display='inline-block'}
+          setTimeout(function() {
+          document.getElementById("CT").textContent="......";}, 1500
+        );
+      }
+      function Ans()
+      {
+        setTimeout(function() {
+          document.getElementById("CT").textContent="Ratcliffe has a good chance of knocking City off their perch.";
+        }, 1000);
+       
+        
+      }
+    </script>
+
+    <div id="show">
+      <div>
+          <p class = 'name'>Bot</p>
+          <p class = 'content'>How can I help you?</p>
+      </div> 
+      <br>
+      <div>
+        <p class = 'uname' id = 'uname' style = 'display: none'>Aaaa</p>
+        <p class = 'ucontent' id = 'ucontent' style = 'display: none'>11111111111111</p>
+      </div>
+      <div>
+          <p class = 'name' id = 'NM' style = 'display: none'>Bot</p>
+          <p class = 'content' id = 'CT' style = 'display: none'>...</p>
+      </div> 
+    </div>
+  </div>
